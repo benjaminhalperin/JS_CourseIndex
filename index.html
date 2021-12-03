@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS--ExpIetmFile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+	padding-top: 5px;
+	padding-right: 80px;
+	padding-bottom: 5px;
+	padding-left: 80px;
+	text-align: center;
+	background: #1abc9c;
+	color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav {
+    display: block;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+	font-weight: bold;
+}
+
+ul.summary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: top .5s ease;
+    -moz-transition: top .5s ease;
+    -o-transition: top .5s ease;
+    transition: top .5s ease;
+}
+
+/* Row styling in the UL */
+.row1{ 
+	clear:left; 
+	float:left; 
+	min-height:30px; 
+}
+
+/* Row styling in the UL - non-link menu */
+.row2{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	color: #669999;
+	padding-left: 15px;
+}
+
+/* Row styling in the UL - 3rd layer hierarchy */
+.row3{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	padding-left: 25px;
+}
+
+A {text-decoration: none;}
+
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex-direction: row;
+  flex: 80%;
+  background-color: white;
+  padding: 5px;
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+	<div class="header">
+	  <h1>JavaScript Codes Samples</h1>
+	  <h2>Data Structures and Modern Operators</h2>
+	</div>
+
+	<div class="navbar">
+	  <a href="../index1.html" class="active">Home</a>
+	  <a href="index-s10.html">Functions</a>
+	  <a href="index-s11.html">Arrays</a>
+	  <a href="index-s12.html">Numbers</a>
+	  <a href="index-s13.html">DOM & Events</a>
+	  <a href="#" class="right">Link</a>
+	</div>
+
+	<div class="row">
+		<div class="side">
+			<h2>Type to Search</h2>
+			<nav class="nav">
+				<ul class="summary">
+					<li class="row1"><a href="s9/titleS9.html" target="internal">titleS9</a></li>
+					<li class="row1"><a href="s9/S9_BasicObjectDeclaration.html" target="internal">Basic</a></li>
+					<li class="row1"><a href="s9/S9L103_DestructuringArray.html" target="internal">Destructuring Array</a></li>
+					<li class="row1"><a href="s9/S9L104_DestructuringObject.html" target="internal">Destructuring Object</a></li>
+					<li class="row1"><a href="s9/S9L105_TheSpreadOperator.html" target="internal">The Spread Operator (...)</a></li>
+					<li class="row1"><a href="s9/S9L106_RestPatternAndParameters.html" target="internal">Rest Pattern and Parameters</a></li> 
+					<li class="row1"><a href="s9/S9L107_ShortCircuiting.html" target="internal">Short Circuiting (&& and || )</a></li>
+					<li class="row1"><a href="s9/S9L108_NullishCoalescingOperator.html" target="internal">Nullish Coalescing Operator</a></li>
+					<li class="row2">Coding Challenge #1:</li>					
+					<li class="row3"><a href="s9/S9L109_Challenge_1_Spec.html" target="internal">The Challenge Spec</a></li>					
+					<li class="row3"><a href="s9/S9L109_Challenge_1-2_BasicStartObject.html" target="internal">Basic Start Object</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-3_TasksDeclaration.html" target="internal">Tasks Declaration</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-4_Task1.html" target="internal">Task1</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-5_Task2.html" target="internal">Task2</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-6_Task3.html" target="internal">Task3</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-7_Task4.html" target="internal">Task4</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-8_Task5.html" target="internal">Task5</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-9_Task6.html" target="internal">Task6</a></li>
+					<li class="row3"><a href="s9/S9L109_Challenge_1-10_Task7.html" target="internal">Task7</a></li>
+					<li class="row1"><a href="s9/S9L109new_LogicalAssignOperators.html" target="internal">Logical Assign Operators</a></li>
+					<li class="row1"><a href="s9/S9L110_LoopingArrays_ForOfLoop.html" target="internal">Looping Arrays</a></li>
+					<li class="row1"><a href="s9/S9L111_EnhancedObjectLiterals.html" target="internal">Enhanced Object Literals</a></li>
+					<li class="row1"><a href="s9/s9L112_OptionalChaining.html" target="internal">Optional Chaining</a></li>
+					<li class="row1"><a href="s9/s9L113_LoopingObjects.html" target="internal">Looping Objects</a></li>
+					<li class="row2">Coding Challenge #2:</li>
+					<li class="row3"><a href="s9/S9L114_Challenge_2_Spec.html" target="internal">The Challenge Spec</a></li>
+					<li class="row3"><a href="s9/S9L114_Challenge_2-2_BasicStartObject.html" target="internal">Basic Start Object</a></li>
+					<li class="row3"><a href="s9/S9L114_Challenge_2-3_TasksDeclaration.html" target="internal">Tasks Declaration</a></li>
+					<li class="row3"><a href="s9/S9L114_Challenge_2-4_Task1.html" target="internal">Task1</a></li>
+					<li class="row3"><a href="s9/S9L114_Challenge_2-5_Task2.html" target="internal">Task2</a></li>
+					<li class="row3"><a href="s9/S9L114_Challenge_2-6_Task3.html" target="internal">Task3</a></li>
+					<li class="row3"><a href="s9/S9L114_Challenge_2-7_Task4.html" target="internal">Task4</a></li>
+					<li class="row1"><a href="s9/S9L115_Sets.html" target="internal">Sets</a></li>
+					<li class="row1"><a href="s9/S9L116_MapsFundamentals.html" target="internal">Maps Fundamentals</a></li>
+					<li class="row1"><a href="s9/S9L117_MapsIteration.html" target="internal">Maps Iteration</a></li>
+					<li class="row1"><a href="s9/S9L118_Summary.html" target="internal">Summary</a></li>
+					<li class="row2">Coding Challenge #3:</li>
+					<li class="row3"><a href="s9/S9L119_Challenge_3_Spec.html" target="internal">The Challenge Spec</a></li>					
+					<li class="row3"><a href="s9/S9L119_Challenge_3-2_BasicStartObject.html" target="internal">Basic Start Object</a></li>
+					<li class="row3"><a href="s9/S9L119_Challenge_3-3_TasksDeclaration.html" target="internal">Tasks Declaration</a></li>
+					<li class="row3"><a href="s9/S9L119_Challenge_3-4_Task1.html" target="internal">Task1</a></li>
+					<li class="row3"><a href="s9/S9L119_Challenge_3-5_Task2.html" target="internal">Task2</a></li>
+					<li class="row3"><a href="s9/S9L119_Challenge_3-6_Task3.html" target="internal">Task3</a></li>
+					<li class="row3"><a href="s9/S9L119_Challenge_3-7_Task4.html" target="internal">Task4</a></li>
+					<li class="row1"><a href="s9/S9L120-_StringsPart1.html" target="internal">Strings Part 1</a></li>
+					<li class="row1"><a href="s9/S9L121-_StringsPart2.html" target="internal">Strings Part 2</a></li>
+					<li class="row1"><a href="s9/S9L122-_StringsPart3.html" target="internal">Strings Part 3</a></li>
+					<li class="row2">Coding Challenge #4:</li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4_Spec.html" target="internal">The Challenge Spec</a></li>					
+					<li class="row3"><a href="s9/S9L123_Challenge_4-2_BasicStartObject.html" target="internal">Basic Start Object</a></li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4-3_TasksDeclaration.html" target="internal">Tasks Declaration</a></li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4-4_StepNo1--ImportTextBoxData.html" target="internal">Step 1</a></li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4-5_StepNo2--AttachEventHandler.html" target="internal">Step 2</a></li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4-6_StepNo3--JoinAndCapitalization.html" target="internal">Step 3</a></li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4-7_StepNo4--FinalStringBuilt.html" target="internal">Step 4</a></li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4-8_StepNo5--AttachSingleEmuji.html" target="internal">Step 5</a></li>
+					<li class="row3"><a href="s9/S9L123_Challenge_4-9_StepNo5--AttachSerialEmuji.html" target="internal">Step 5-1</a></li>
+					<li class="row1"><a href="s9/s9L124_StringMethodsPractice.html" target="internal">String Methods Practice</a></li>
+					<li class="row3"><a href="s9/s9L124_StringMethodsPractice--spclSolutions.html" target="internal">Special Solutions</a></li>
+					
+					
+				</ul>
+			</nav>
+		</div>
+		<div class="main">
+			<br>
+			<iframe style="width: 100%; height: 620px" name="internal"></iframe>
+		</div>
+	</div>
+
+<!--<div class="footer">
+  <h2>Footer</h2>
+</div>-->
+
+</body>
+</html>

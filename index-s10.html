@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS--Functions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+	padding-top: 5px;
+	padding-right: 80px;
+	padding-bottom: 5px;
+	padding-left: 80px;
+	text-align: center;
+	background: #ff3385;
+	color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+.nav {
+    display: block;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+	font-weight: bold;
+}
+
+ul.summary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: top .5s ease;
+    -moz-transition: top .5s ease;
+    -o-transition: top .5s ease;
+    transition: top .5s ease;
+}
+
+/* Row styling in the UL */
+.row1{ 
+	clear:left; 
+	float:left; 
+	min-height:30px; 
+}
+/* Row styling in the UL - non-link menu */
+.row2{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	color: #669999;
+	padding-left: 15px;
+}
+
+/* Row styling in the UL - 3rd layer hierarchy */
+.row3{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	padding-left: 25px;
+}
+
+A {text-decoration: none;}
+
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex-direction: row;
+  flex: 80%;
+  background-color: white;
+  padding: 5px;
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+	<div class="header">
+	  <h1>JavaScript Codes Samples</h1>
+	  <h2>A Closer Look at Functions </h2>
+	</div>
+
+	<div class="navbar">
+	  <a href="index.html" class="active">Home</a>
+	  <a href="s10IIFE_Examples/index.html">Examples1</a>
+	  <a href="s10IIFE_Examples2/index_s10iifeexample2.html">Examples2</a>
+	  <a href="#" class="right">Link</a>
+	</div>
+
+	<div class="row">
+		<div class="side">
+			<h2>Type to Search</h2>
+			<nav class="nav">
+				<ul class="summary">
+					<li class="row1"><a href="s10/titleS10.html" target="internal">titleS10</a></li>
+					<li class="row1"><a href="s10/S10L127_DefaultsParameters.html" target="internal">Defaults Parameters</a></li>
+					<li class="row1"><a href="s10/S10L128_PassingArguments.html" target="internal">Passing Arguments</a></li>
+					<li class="row1"><a href="s10/S10L130_FunctionsAcceptingCallback.html" target="internal">FM Accepting Callbacks</a></li>
+					<li class="row1"><a href="s10/S10L131_FunctionsReturnFunctions.html" target="internal">FM Return FM</a></li>
+					<li class="row1"><a href="s10/S10L132_CallAndApplyMethods.html" target="internal">Call & Apply Methods</a></li>
+					<li class="row3"><a href="s10/S10L132_CallAndApplyMethods--spcl1.html" target="internal">S10L132_spcl1-Exc</a></li>
+					<li class="row3"><a href="s10/S10L132_CallAndApplyMethods--spcl2.html" target="internal">S10L132_spcl2</a></li>
+					<li class="row1"><a href="s10/S10L133_TheBindMethod.html" target="internal">The Bind Method</a></li>
+					<li class="row3"><a href="s10/S10L133_TheBindMethod--spcl1.html" target="internal">S10L133_spcl1</a></li>
+					<li class="row3"><a href="s10/S10L133_TheBindMethod--spcl2.html" target="internal">S10L133_spcl2</a></li>
+					<li class="row2">Coding Challenge #1:</li>					
+					<li class="row3"><a href="s10/S10L134_Challenge_1_Spec.html" target="internal">The Challenge Spec</a></li>					
+					<li class="row3"><a href="s10/S10L134_Challenge_1-2_BasicStartObject.html" target="internal">Basic Start Object</a></li>
+					<li class="row3"><a href="s10/S10L134_Challenge_1-3_TasksDeclaration.html" target="internal">Tasks Declaration</a></li>
+					<li class="row3"><a href="s10/S10L134_Challenge_1-4_Task1.html" target="internal">Task 1</a></li>
+					<li class="row3"><a href="s10/S10L134_Challenge_1-5_Task2.html" target="internal">Task 2</a></li>
+					<li class="row3"><a href="s10/S10L134_Challenge_1-6_Task3.html" target="internal">Task 3</a></li>
+					<li class="row3"><a href="s10/S10L134_Challenge_1-7_Task4.html" target="internal">Task 4</a></li>
+					<li class="row3"><a href="s10/S10L134_Challenge_1-8_Bonus.html" target="internal">Bonus</a></li>
+					<li class="row3"><a href="s10Challenge1_Solutions/s10Challenge1Solutions.html" target="internal">Solutions</a></li>
+					<li class="row1"><a href="s10/S10L135_InvokedFunctions.html" target="internal">Invoked Functions</a></li>
+					<li class="row1"><a href="s10/S10L136_Closures.html" target="internal">CLOSURES</a></li>
+					<li class="row1"><a href="s10/S10L137_MoreClosuresExamples.html" target="internal">More Examples</a></li>
+					<li class="row2">Coding Challenge #2:</li>					
+					<li class="row3"><a href="s10/S10L138_Challenge_2_Spec.html" target="internal">The Challenge Spec</a></li>					
+					<li class="row3"><a href="s10/S10L138_Challenge_2-2_BasicStartObject.html" target="internal">Basic Start Object</a></li>
+					<li class="row3"><a href="s10/S10L138_Challenge_2-3_Task1.html" target="internal">Task 1</a></li>
+					<li class="row3"><a href="s10Challenge2_Solutions/s10Challenge2Solutions.html" target="internal">Solutions</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+		<div class="main">
+			<br>
+			<iframe style="width: 100%; height: 620px" name="internal"></iframe>
+		</div>
+	</div>
+
+<!--<div class="footer">
+  <h2>Footer</h2>
+</div>-->
+
+</body>
+</html>

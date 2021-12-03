@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS--DOM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+	padding-top: 5px;
+	padding-right: 80px;
+	padding-bottom: 5px;
+	padding-left: 80px;
+	text-align: center;
+	background: #00008B;
+	color: yellow;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+.nav {
+    display: block;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+	font-weight: bold;
+}
+
+ul.summary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: top .5s ease;
+    -moz-transition: top .5s ease;
+    -o-transition: top .5s ease;
+    transition: top .5s ease;
+}
+
+/* Row styling in the UL */
+.row1{ 
+	clear:left; 
+	float:left; 
+	min-height:30px; 
+}
+/* Row styling in the UL - non-link menu */
+.row2{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	color: #669999;
+	padding-left: 15px;
+}
+
+/* Row styling in the UL - 3rd layer hierarchy */
+.row3{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	padding-left: 25px;
+}
+
+A {text-decoration: none;}
+
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex-direction: row;
+  flex: 80%;
+  background-color: white;
+  padding: 5px;
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+	<div class="header">
+	  <h1>JavaScript Codes Samples</h1>
+	  <h2>Advanced DOM and Events </h2>
+	</div>
+
+	<div class="navbar">
+	  <a href="index.html" class="active">Home</a>
+	  <a href="#">Examples1</a>
+	  <a href="#" class="right">Link</a>
+	</div>
+
+	<div class="row">
+		<div class="side">
+			<h2>Type to Search</h2>
+			<nav class="nav">
+				<ul class="summary">
+					<li class="row1"><a href="s13/titleS13.html" target="internal">titleS13</a></li>
+					<li class="row1"><a href="s13/S13L184_BankistWebsite.html" target="internal">Bankist Website</a></li>
+					<li class="row1"><a href="s13/S13L185_HowDOM_ReallyWorks.html" target="internal">How DOM Works</a></li>
+					<li class="row1"><a href="s13/S13L186_DOMelements.html" target="internal">DOM Elements</a></li>
+					<li class="row1"><a href="s13/S13L187_StylesAttributesClasses.html" target="internal">Styles Attr.& Classes</a></li>
+					<li class="row1"><a href="s13/S13L188_SmoothScrolling.html" target="internal">Smooth Scrolling</a></li>
+					<li class="row1"><a href="s13/S13L189_EventsTypes.html" target="internal">Events Types</a></li>
+					<li class="row1"><a href="s13/S13L191_BubblingAndCapturing.html" target="internal">Bubbling And Capturing</a></li>
+					
+					
+				</ul>
+			</nav>
+		</div>
+		<div class="main">
+			<br>
+			<iframe style="width: 100%; height: 620px" name="internal"></iframe>
+		</div>
+	</div>
+
+<!--<div class="footer">
+  <h2>Footer</h2>
+</div>-->
+
+</body>
+</html>

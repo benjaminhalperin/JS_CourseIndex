@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS--Arrays</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+	padding-top: 5px;
+	padding-right: 80px;
+	padding-bottom: 5px;
+	padding-left: 80px;
+	text-align: center;
+	background: #0080ff;
+	color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+.nav {
+    display: block;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+	font-weight: bold;
+}
+
+ul.summary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: top .5s ease;
+    -moz-transition: top .5s ease;
+    -o-transition: top .5s ease;
+    transition: top .5s ease;
+}
+
+/* Row styling in the UL */
+.row1{ 
+	clear:left; 
+	float:left; 
+	min-height:30px; 
+}
+/* Row styling in the UL - non-link menu */
+.row2{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	color: #669999;
+	padding-left: 15px;
+}
+
+/* Row styling in the UL - 3rd layer hierarchy */
+.row3{ 
+	clear:left; 
+	float:left; 
+	min-height:30px;
+	padding-left: 25px;
+}
+
+A {text-decoration: none;}
+
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex-direction: row;
+  flex: 80%;
+  background-color: white;
+  padding: 5px;
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+	<div class="header">
+	  <h1>JavaScript Codes Samples</h1>
+	  <h2>Working with Arrays </h2>
+	</div>
+
+	<div class="navbar">
+	  <a href="index.html" class="active">Home</a>
+	  <a href="s11FindMethodExamples\s11_FindMethodExamples.html">Examples1</a>
+	  <a href="s11FindIndex_Examples\s11_FindIndexExamples.html">Examples2</a>
+	  <a href="s11Transfers_Examples\s11_TransferExamples.html">Examples3</a>
+	  <a href="#" class="right">Link</a>
+	</div>
+
+	<div class="row">
+		<div class="side">
+			<h2>Type to Search</h2>
+			<nav class="nav">
+				<ul class="summary">
+					<li class="row1"><a href="s11/titleS11.html" target="internal">titleS11</a></li>
+					<li class="row1"><a href="s11/S11L141_SimpleArrayMethods.html" target="internal">Simple Methods</a></li>
+					<li class="row1"><a href="s11/S11L142_LoopingArray.html" target="internal">Map & Set</a></li>
+					<li class="row1"><a href="s11/S11L142-1_LoopingArray.html" target="internal">For & forEach</a></li>
+					<li class="row3"><a href="s11/S11L142-1_LoopingArray--MDN_SpclExmp.html" target="internal">Spcl Examples</a></li>
+					<li class="row1"><a href="s11/S11L143_AT_Method.html" target="internal">New AT Method</a></li>
+					<li class="row1"><a href="s11/S11L145_CreatingDomElements.html" target="internal">DOM Elements</a></li>
+					<li class="row2">Coding Challenge #1:</li>
+					<li class="row3"><a href="s11/S11L146_Challenge_1_Spec.html" target="internal">The Challenge Spec</a></li>					
+					<li class="row3"><a href="s11/S11L146_Challenge_1-2_TasksDeclaration.html" target="internal">Tasks Declaration</a></li>
+					<li class="row3"><a href="s11/S11L146_Challenge_1-3_Task1.html" target="internal">Task 1</a></li>
+					<li class="row3"><a href="s11/S11L146_Challenge_1-4_Task2.html" target="internal">Task 2</a></li>
+					<li class="row3"><a href="s11/S11L146_Challenge_1-5_Task3.html" target="internal">Task 3</a></li>
+					<li class="row3"><a href="s11/S11L146_Challenge_1-6_Task4.html" target="internal">Task 4</a></li>
+					<li class="row3"><a href="s11Challenge1_Solutions/s11Challenge1Solutions.html" target="internal">Solutions</a></li>
+					<li class="row1"><a href="s11/S11L148_MapMethod.html" target="internal">The Map Method</a></li>
+					<li class="row1"><a href="s11/S11L148_MapMethod--Examples.html" target="internal">Map Examples</a></li>
+					<li class="row1"><a href="s11/S11L149_ComputingUsernames.html" target="internal">Computing Usernames</a></li>
+					<li class="row1"><a href="s11/S11L150_FilterMethod.html" target="internal">The Filter Method</a></li>
+					<li class="row1"><a href="s11/S11L150_FilterMethod--Examples.html" target="internal">Filter Examples</a></li>
+					<li class="row1"><a href="s11/S11L151_ReduceMethod.html" target="internal">The Reduce Method</a></li>
+					<li class="row1"><a href="s11/S11L151_ReduceMethod--Examples.html" target="internal">Reduce Examples</a></li>
+					<li class="row2">Coding Challenge #2:</li>
+					<li class="row3"><a href="s11/S11L152_Challenge_2_Spec.html" target="internal">The Challenge Spec</a></li>					
+					<li class="row3"><a href="s11/S11L152_Challenge_2-2_TasksDeclaration.html" target="internal">Tasks Declaration</a></li>
+					<li class="row3"><a href="s11/S11L152_Challenge_2-3_Task1.html" target="internal">Task 1</a></li>
+					<li class="row3"><a href="s11/S11L152_Challenge_2-4_Task2.html" target="internal">Task 2</a></li>
+					<li class="row3"><a href="s11/S11L152_Challenge_2-5_Task3.html" target="internal">Task 3</a></li>
+					<li class="row3"><a href="s11Challenge2_Solutions/s11Challenge2Solutions.html" target="internal">Solutions</a></li>
+					<li class="row1"><a href="s11/S11L153_ChainingMethods.html" target="internal">Chaining Methods</a></li>
+					<li class="row2">Coding Challenge #3:</li>
+					<li class="row3"><a href="s11/S11L154_Challenge_3_Spec.html" target="internal">The Challenge Spec</a></li>
+					<li class="row3"><a href="s11/S11L154_Challenge_3_Task1.html" target="internal">Task 1</a></li>
+					<li class="row3"><a href="s11Challenge3_Solutions/s11Challenge3Solutions.html" target="internal">Solutions</a></li>
+					<li class="row1"><a href="s11/S11L155_FindMethod.html" target="internal">Find Method</a></li>
+					<!--<li class="row1"><a href="s11FindMethodExamples/s11_FindMethodExamples.html" target="internal">Find Examples</a></li>-->
+					<li class="row1"><a href="s11/S11L156_ImplementingLogin.html" target="internal">Implementing Login</a></li>
+					<li class="row1"><a href="s11/S11L157_ImplementingTransfers.html" target="internal">Implementing Transfers</a></li>
+					<!--<li class="row1"><a href="s11Transfers_Examples/s11_TransferExamples.html" target="internal">Transfer Examples</a></li>-->
+					<li class="row1"><a href="s11/S11L158_findIndexMethod.html" target="internal">findIndex Method</a></li>
+					<!--<li class="row1"><a href="s11FindIndex_Examples/s11_FindIndexExamples.html" target="internal">FindIndex Examples</a></li>-->
+					<li class="row1"><a href="s11/S11L159_SomeEveryMethods.html" target="internal">Some Every Methods</a></li>
+					<li class="row1"><a href="s11/S11L160_FlatFlatMapMethods.html" target="internal">Flat and FlatMap Methods</a></li>
+					<li class="row1"><a href="s11/S11L161_SortingArrays.html" target="internal">Sorting Arrays</a></li>
+					<li class="row1"><a href="s11/S11L162_CreatingArrays.html" target="internal">Creating & Filling Arrays</a></li>
+					<li class="row1"><a href="BankistApp/index.html" target="internal">Summary: BANKIST</a></li>
+					<li class="row1"><a href="s11/S11L164_PracticeArrays.html" target="internal">Practice Arrays</a></li>
+					<li class="row2">Coding Challenge #4:</li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4_Spec.html" target="internal">The Challenge Spec</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4_TestData.html" target="internal">Test Data</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-1_Task1.html" target="internal">Task 1</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-2_Task2.html" target="internal">Task 2</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-3_Task3.html" target="internal">Task 3</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-4_Task4.html" target="internal">Task 4</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-5_Task5.html" target="internal">Task 5</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-6_Task6.html" target="internal">Task 6</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-7_Task7.html" target="internal">Task 7</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-8_Task8.html" target="internal">Task 8</a></li>
+					<li class="row3"><a href="s11/S11L165_Challenge_4-9_SummaryCode.html" target="internal">Summary Code</a></li>
+					<li class="row3"><a href="s11Challenge4_Solutions/s11Challenge4Solutions.html" target="internal">Solutions</a></li>
+
+				</ul>
+			</nav>
+		</div>
+		<div class="main">
+			<br>
+			<iframe style="width: 100%; height: 620px" name="internal"></iframe>
+		</div>
+	</div>
+
+<!--<div class="footer">
+  <h2>Footer</h2>
+</div>-->
+
+</body>
+</html>
